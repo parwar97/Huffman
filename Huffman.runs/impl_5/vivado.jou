@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Sep 17 23:55:52 2020
+# Process ID: 13220
+# Current directory: D:/SDUP_2020_projekt_H/Huffman/Huffman.runs/impl_5
+# Command line: vivado.exe -log huffman_decoder.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source huffman_decoder.tcl -notrace
+# Log file: D:/SDUP_2020_projekt_H/Huffman/Huffman.runs/impl_5/huffman_decoder.vdi
+# Journal file: D:/SDUP_2020_projekt_H/Huffman/Huffman.runs/impl_5\vivado.jou
+#-----------------------------------------------------------
+source huffman_decoder.tcl -notrace

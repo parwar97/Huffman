@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "huffman_decoder_tb_func_synth.v"
+sv xil_defaultlib  "../../../../Huffman.srcs/sim_1/new/huffman_decoder_tb.v"
+
+# Do not sort compile order
+nosort

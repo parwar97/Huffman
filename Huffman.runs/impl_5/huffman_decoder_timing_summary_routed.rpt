@@ -1,0 +1,1281 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Thu Sep 17 23:57:47 2020
+| Host         : DESKTOP-SERB9R5 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file huffman_decoder_timing_summary_routed.rpt -rpx huffman_decoder_timing_summary_routed.rpx
+| Design       : huffman_decoder
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 19 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 9 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      6.482        0.000                      0                14651        0.060        0.000                      0                14651        8.750        0.000                       0                  2626  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clock  {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clock               6.482        0.000                      0                14651        0.060        0.000                      0                14651        8.750        0.000                       0                  2626  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clock
+  To Clock:  clock
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.482ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.060ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        8.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.482ns  (required time - arrival time)
+  Source:                 tree/FSM_sequential_tree_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/ID_reg_r2_64_127_27_29/RAMA/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clock rise@20.000ns - clock rise@0.000ns)
+  Data Path Delay:        13.395ns  (logic 0.580ns (4.330%)  route 12.815ns (95.670%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.421ns = ( 24.421 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.024ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.744     5.024    tree/clock_IBUF_BUFG
+    SLICE_X31Y43         FDRE                                         r  tree/FSM_sequential_tree_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y43         FDRE (Prop_fdre_C_Q)         0.456     5.480 r  tree/FSM_sequential_tree_state_reg[1]/Q
+                         net (fo=149, routed)         4.659    10.139    tree/tree_state__0[1]
+    SLICE_X13Y35         LUT6 (Prop_lut6_I3_O)        0.124    10.263 r  tree/ID_reg_r1_0_63_0_2_i_9/O
+                         net (fo=672, routed)         8.156    18.419    tree/ID_reg_r2_64_127_27_29/ADDRD1
+    SLICE_X32Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_27_29/RAMA/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clock (IN)
+                         net (fo=0)                   0.000    20.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.484    24.421    tree/ID_reg_r2_64_127_27_29/WCLK
+    SLICE_X32Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_27_29/RAMA/CLK
+                         clock pessimism              0.458    24.879    
+                         clock uncertainty           -0.035    24.843    
+    SLICE_X32Y32         RAMD64E (Setup_ramd64e_CLK_WADR1)
+                                                      0.058    24.901    tree/ID_reg_r2_64_127_27_29/RAMA
+  -------------------------------------------------------------------
+                         required time                         24.901    
+                         arrival time                         -18.419    
+  -------------------------------------------------------------------
+                         slack                                  6.482    
+
+Slack (MET) :             6.482ns  (required time - arrival time)
+  Source:                 tree/FSM_sequential_tree_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/ID_reg_r2_64_127_27_29/RAMB/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clock rise@20.000ns - clock rise@0.000ns)
+  Data Path Delay:        13.395ns  (logic 0.580ns (4.330%)  route 12.815ns (95.670%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.421ns = ( 24.421 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.024ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.744     5.024    tree/clock_IBUF_BUFG
+    SLICE_X31Y43         FDRE                                         r  tree/FSM_sequential_tree_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y43         FDRE (Prop_fdre_C_Q)         0.456     5.480 r  tree/FSM_sequential_tree_state_reg[1]/Q
+                         net (fo=149, routed)         4.659    10.139    tree/tree_state__0[1]
+    SLICE_X13Y35         LUT6 (Prop_lut6_I3_O)        0.124    10.263 r  tree/ID_reg_r1_0_63_0_2_i_9/O
+                         net (fo=672, routed)         8.156    18.419    tree/ID_reg_r2_64_127_27_29/ADDRD1
+    SLICE_X32Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_27_29/RAMB/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clock (IN)
+                         net (fo=0)                   0.000    20.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.484    24.421    tree/ID_reg_r2_64_127_27_29/WCLK
+    SLICE_X32Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_27_29/RAMB/CLK
+                         clock pessimism              0.458    24.879    
+                         clock uncertainty           -0.035    24.843    
+    SLICE_X32Y32         RAMD64E (Setup_ramd64e_CLK_WADR1)
+                                                      0.058    24.901    tree/ID_reg_r2_64_127_27_29/RAMB
+  -------------------------------------------------------------------
+                         required time                         24.901    
+                         arrival time                         -18.419    
+  -------------------------------------------------------------------
+                         slack                                  6.482    
+
+Slack (MET) :             6.482ns  (required time - arrival time)
+  Source:                 tree/FSM_sequential_tree_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/ID_reg_r2_64_127_27_29/RAMC/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clock rise@20.000ns - clock rise@0.000ns)
+  Data Path Delay:        13.395ns  (logic 0.580ns (4.330%)  route 12.815ns (95.670%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.421ns = ( 24.421 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.024ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.744     5.024    tree/clock_IBUF_BUFG
+    SLICE_X31Y43         FDRE                                         r  tree/FSM_sequential_tree_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y43         FDRE (Prop_fdre_C_Q)         0.456     5.480 r  tree/FSM_sequential_tree_state_reg[1]/Q
+                         net (fo=149, routed)         4.659    10.139    tree/tree_state__0[1]
+    SLICE_X13Y35         LUT6 (Prop_lut6_I3_O)        0.124    10.263 r  tree/ID_reg_r1_0_63_0_2_i_9/O
+                         net (fo=672, routed)         8.156    18.419    tree/ID_reg_r2_64_127_27_29/ADDRD1
+    SLICE_X32Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_27_29/RAMC/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clock (IN)
+                         net (fo=0)                   0.000    20.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.484    24.421    tree/ID_reg_r2_64_127_27_29/WCLK
+    SLICE_X32Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_27_29/RAMC/CLK
+                         clock pessimism              0.458    24.879    
+                         clock uncertainty           -0.035    24.843    
+    SLICE_X32Y32         RAMD64E (Setup_ramd64e_CLK_WADR1)
+                                                      0.058    24.901    tree/ID_reg_r2_64_127_27_29/RAMC
+  -------------------------------------------------------------------
+                         required time                         24.901    
+                         arrival time                         -18.419    
+  -------------------------------------------------------------------
+                         slack                                  6.482    
+
+Slack (MET) :             6.482ns  (required time - arrival time)
+  Source:                 tree/FSM_sequential_tree_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/ID_reg_r2_64_127_27_29/RAMD/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clock rise@20.000ns - clock rise@0.000ns)
+  Data Path Delay:        13.395ns  (logic 0.580ns (4.330%)  route 12.815ns (95.670%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.421ns = ( 24.421 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.024ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.744     5.024    tree/clock_IBUF_BUFG
+    SLICE_X31Y43         FDRE                                         r  tree/FSM_sequential_tree_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y43         FDRE (Prop_fdre_C_Q)         0.456     5.480 r  tree/FSM_sequential_tree_state_reg[1]/Q
+                         net (fo=149, routed)         4.659    10.139    tree/tree_state__0[1]
+    SLICE_X13Y35         LUT6 (Prop_lut6_I3_O)        0.124    10.263 r  tree/ID_reg_r1_0_63_0_2_i_9/O
+                         net (fo=672, routed)         8.156    18.419    tree/ID_reg_r2_64_127_27_29/ADDRD1
+    SLICE_X32Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_27_29/RAMD/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clock (IN)
+                         net (fo=0)                   0.000    20.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.484    24.421    tree/ID_reg_r2_64_127_27_29/WCLK
+    SLICE_X32Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_27_29/RAMD/CLK
+                         clock pessimism              0.458    24.879    
+                         clock uncertainty           -0.035    24.843    
+    SLICE_X32Y32         RAMD64E (Setup_ramd64e_CLK_WADR1)
+                                                      0.058    24.901    tree/ID_reg_r2_64_127_27_29/RAMD
+  -------------------------------------------------------------------
+                         required time                         24.901    
+                         arrival time                         -18.419    
+  -------------------------------------------------------------------
+                         slack                                  6.482    
+
+Slack (MET) :             6.504ns  (required time - arrival time)
+  Source:                 tree/FSM_sequential_tree_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/ID_reg_r2_64_127_21_23/RAMA/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clock rise@20.000ns - clock rise@0.000ns)
+  Data Path Delay:        13.374ns  (logic 0.580ns (4.337%)  route 12.794ns (95.663%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.144ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.422ns = ( 24.422 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.024ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.744     5.024    tree/clock_IBUF_BUFG
+    SLICE_X31Y43         FDRE                                         r  tree/FSM_sequential_tree_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y43         FDRE (Prop_fdre_C_Q)         0.456     5.480 r  tree/FSM_sequential_tree_state_reg[1]/Q
+                         net (fo=149, routed)         4.659    10.139    tree/tree_state__0[1]
+    SLICE_X13Y35         LUT6 (Prop_lut6_I3_O)        0.124    10.263 r  tree/ID_reg_r1_0_63_0_2_i_9/O
+                         net (fo=672, routed)         8.135    18.398    tree/ID_reg_r2_64_127_21_23/ADDRD1
+    SLICE_X34Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_21_23/RAMA/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clock (IN)
+                         net (fo=0)                   0.000    20.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.485    24.422    tree/ID_reg_r2_64_127_21_23/WCLK
+    SLICE_X34Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_21_23/RAMA/CLK
+                         clock pessimism              0.458    24.880    
+                         clock uncertainty           -0.035    24.844    
+    SLICE_X34Y32         RAMD64E (Setup_ramd64e_CLK_WADR1)
+                                                      0.058    24.902    tree/ID_reg_r2_64_127_21_23/RAMA
+  -------------------------------------------------------------------
+                         required time                         24.902    
+                         arrival time                         -18.398    
+  -------------------------------------------------------------------
+                         slack                                  6.504    
+
+Slack (MET) :             6.504ns  (required time - arrival time)
+  Source:                 tree/FSM_sequential_tree_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/ID_reg_r2_64_127_21_23/RAMB/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clock rise@20.000ns - clock rise@0.000ns)
+  Data Path Delay:        13.374ns  (logic 0.580ns (4.337%)  route 12.794ns (95.663%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.144ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.422ns = ( 24.422 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.024ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.744     5.024    tree/clock_IBUF_BUFG
+    SLICE_X31Y43         FDRE                                         r  tree/FSM_sequential_tree_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y43         FDRE (Prop_fdre_C_Q)         0.456     5.480 r  tree/FSM_sequential_tree_state_reg[1]/Q
+                         net (fo=149, routed)         4.659    10.139    tree/tree_state__0[1]
+    SLICE_X13Y35         LUT6 (Prop_lut6_I3_O)        0.124    10.263 r  tree/ID_reg_r1_0_63_0_2_i_9/O
+                         net (fo=672, routed)         8.135    18.398    tree/ID_reg_r2_64_127_21_23/ADDRD1
+    SLICE_X34Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_21_23/RAMB/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clock (IN)
+                         net (fo=0)                   0.000    20.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.485    24.422    tree/ID_reg_r2_64_127_21_23/WCLK
+    SLICE_X34Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_21_23/RAMB/CLK
+                         clock pessimism              0.458    24.880    
+                         clock uncertainty           -0.035    24.844    
+    SLICE_X34Y32         RAMD64E (Setup_ramd64e_CLK_WADR1)
+                                                      0.058    24.902    tree/ID_reg_r2_64_127_21_23/RAMB
+  -------------------------------------------------------------------
+                         required time                         24.902    
+                         arrival time                         -18.398    
+  -------------------------------------------------------------------
+                         slack                                  6.504    
+
+Slack (MET) :             6.504ns  (required time - arrival time)
+  Source:                 tree/FSM_sequential_tree_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/ID_reg_r2_64_127_21_23/RAMC/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clock rise@20.000ns - clock rise@0.000ns)
+  Data Path Delay:        13.374ns  (logic 0.580ns (4.337%)  route 12.794ns (95.663%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.144ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.422ns = ( 24.422 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.024ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.744     5.024    tree/clock_IBUF_BUFG
+    SLICE_X31Y43         FDRE                                         r  tree/FSM_sequential_tree_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y43         FDRE (Prop_fdre_C_Q)         0.456     5.480 r  tree/FSM_sequential_tree_state_reg[1]/Q
+                         net (fo=149, routed)         4.659    10.139    tree/tree_state__0[1]
+    SLICE_X13Y35         LUT6 (Prop_lut6_I3_O)        0.124    10.263 r  tree/ID_reg_r1_0_63_0_2_i_9/O
+                         net (fo=672, routed)         8.135    18.398    tree/ID_reg_r2_64_127_21_23/ADDRD1
+    SLICE_X34Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_21_23/RAMC/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clock (IN)
+                         net (fo=0)                   0.000    20.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.485    24.422    tree/ID_reg_r2_64_127_21_23/WCLK
+    SLICE_X34Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_21_23/RAMC/CLK
+                         clock pessimism              0.458    24.880    
+                         clock uncertainty           -0.035    24.844    
+    SLICE_X34Y32         RAMD64E (Setup_ramd64e_CLK_WADR1)
+                                                      0.058    24.902    tree/ID_reg_r2_64_127_21_23/RAMC
+  -------------------------------------------------------------------
+                         required time                         24.902    
+                         arrival time                         -18.398    
+  -------------------------------------------------------------------
+                         slack                                  6.504    
+
+Slack (MET) :             6.504ns  (required time - arrival time)
+  Source:                 tree/FSM_sequential_tree_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/ID_reg_r2_64_127_21_23/RAMD/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clock rise@20.000ns - clock rise@0.000ns)
+  Data Path Delay:        13.374ns  (logic 0.580ns (4.337%)  route 12.794ns (95.663%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.144ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.422ns = ( 24.422 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.024ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.744     5.024    tree/clock_IBUF_BUFG
+    SLICE_X31Y43         FDRE                                         r  tree/FSM_sequential_tree_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y43         FDRE (Prop_fdre_C_Q)         0.456     5.480 r  tree/FSM_sequential_tree_state_reg[1]/Q
+                         net (fo=149, routed)         4.659    10.139    tree/tree_state__0[1]
+    SLICE_X13Y35         LUT6 (Prop_lut6_I3_O)        0.124    10.263 r  tree/ID_reg_r1_0_63_0_2_i_9/O
+                         net (fo=672, routed)         8.135    18.398    tree/ID_reg_r2_64_127_21_23/ADDRD1
+    SLICE_X34Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_21_23/RAMD/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clock (IN)
+                         net (fo=0)                   0.000    20.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.485    24.422    tree/ID_reg_r2_64_127_21_23/WCLK
+    SLICE_X34Y32         RAMD64E                                      r  tree/ID_reg_r2_64_127_21_23/RAMD/CLK
+                         clock pessimism              0.458    24.880    
+                         clock uncertainty           -0.035    24.844    
+    SLICE_X34Y32         RAMD64E (Setup_ramd64e_CLK_WADR1)
+                                                      0.058    24.902    tree/ID_reg_r2_64_127_21_23/RAMD
+  -------------------------------------------------------------------
+                         required time                         24.902    
+                         arrival time                         -18.398    
+  -------------------------------------------------------------------
+                         slack                                  6.504    
+
+Slack (MET) :             6.632ns  (required time - arrival time)
+  Source:                 tree/FSM_sequential_tree_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/ID_reg_r4_0_63_18_20/RAMA/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clock rise@20.000ns - clock rise@0.000ns)
+  Data Path Delay:        13.243ns  (logic 0.580ns (4.380%)  route 12.663ns (95.620%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.148ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.418ns = ( 24.418 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.024ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.744     5.024    tree/clock_IBUF_BUFG
+    SLICE_X31Y43         FDRE                                         r  tree/FSM_sequential_tree_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y43         FDRE (Prop_fdre_C_Q)         0.456     5.480 r  tree/FSM_sequential_tree_state_reg[1]/Q
+                         net (fo=149, routed)         4.659    10.139    tree/tree_state__0[1]
+    SLICE_X13Y35         LUT6 (Prop_lut6_I3_O)        0.124    10.263 r  tree/ID_reg_r1_0_63_0_2_i_9/O
+                         net (fo=672, routed)         8.004    18.267    tree/ID_reg_r4_0_63_18_20/ADDRD1
+    SLICE_X32Y30         RAMD64E                                      r  tree/ID_reg_r4_0_63_18_20/RAMA/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clock (IN)
+                         net (fo=0)                   0.000    20.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.481    24.418    tree/ID_reg_r4_0_63_18_20/WCLK
+    SLICE_X32Y30         RAMD64E                                      r  tree/ID_reg_r4_0_63_18_20/RAMA/CLK
+                         clock pessimism              0.458    24.876    
+                         clock uncertainty           -0.035    24.840    
+    SLICE_X32Y30         RAMD64E (Setup_ramd64e_CLK_WADR1)
+                                                      0.058    24.898    tree/ID_reg_r4_0_63_18_20/RAMA
+  -------------------------------------------------------------------
+                         required time                         24.898    
+                         arrival time                         -18.267    
+  -------------------------------------------------------------------
+                         slack                                  6.632    
+
+Slack (MET) :             6.632ns  (required time - arrival time)
+  Source:                 tree/FSM_sequential_tree_state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/ID_reg_r4_0_63_18_20/RAMB/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clock rise@20.000ns - clock rise@0.000ns)
+  Data Path Delay:        13.243ns  (logic 0.580ns (4.380%)  route 12.663ns (95.620%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.148ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.418ns = ( 24.418 - 20.000 ) 
+    Source Clock Delay      (SCD):    5.024ns
+    Clock Pessimism Removal (CPR):    0.458ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         1.008     1.008 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           2.171     3.179    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     3.280 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.744     5.024    tree/clock_IBUF_BUFG
+    SLICE_X31Y43         FDRE                                         r  tree/FSM_sequential_tree_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y43         FDRE (Prop_fdre_C_Q)         0.456     5.480 r  tree/FSM_sequential_tree_state_reg[1]/Q
+                         net (fo=149, routed)         4.659    10.139    tree/tree_state__0[1]
+    SLICE_X13Y35         LUT6 (Prop_lut6_I3_O)        0.124    10.263 r  tree/ID_reg_r1_0_63_0_2_i_9/O
+                         net (fo=672, routed)         8.004    18.267    tree/ID_reg_r4_0_63_18_20/ADDRD1
+    SLICE_X32Y30         RAMD64E                                      r  tree/ID_reg_r4_0_63_18_20/RAMB/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)     20.000    20.000 r  
+    AA9                                               0.000    20.000 r  clock (IN)
+                         net (fo=0)                   0.000    20.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.874    20.874 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           1.972    22.846    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    22.937 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        1.481    24.418    tree/ID_reg_r4_0_63_18_20/WCLK
+    SLICE_X32Y30         RAMD64E                                      r  tree/ID_reg_r4_0_63_18_20/RAMB/CLK
+                         clock pessimism              0.458    24.876    
+                         clock uncertainty           -0.035    24.840    
+    SLICE_X32Y30         RAMD64E (Setup_ramd64e_CLK_WADR1)
+                                                      0.058    24.898    tree/ID_reg_r4_0_63_18_20/RAMB
+  -------------------------------------------------------------------
+                         required time                         24.898    
+                         arrival time                         -18.267    
+  -------------------------------------------------------------------
+                         slack                                  6.632    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 tree/ascii_symbol_it_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/code_tab_reg_0_15_0_0/DP/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.383ns  (logic 0.141ns (36.840%)  route 0.242ns (63.160%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.053ns
+    Source Clock Delay      (SCD):    1.538ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.613     1.538    tree/clock_IBUF_BUFG
+    SLICE_X7Y21          FDRE                                         r  tree/ascii_symbol_it_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y21          FDRE (Prop_fdre_C_Q)         0.141     1.679 r  tree/ascii_symbol_it_reg[0]/Q
+                         net (fo=52, routed)          0.242     1.920    tree/code_tab_reg_0_15_0_0/A0
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0/DP/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.880     2.053    tree/code_tab_reg_0_15_0_0/WCLK
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0/DP/CLK
+                         clock pessimism             -0.503     1.551    
+    SLICE_X6Y21          RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.861    tree/code_tab_reg_0_15_0_0/DP
+  -------------------------------------------------------------------
+                         required time                         -1.861    
+                         arrival time                           1.920    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 tree/ascii_symbol_it_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/code_tab_reg_0_15_0_0/SP/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.383ns  (logic 0.141ns (36.840%)  route 0.242ns (63.160%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.053ns
+    Source Clock Delay      (SCD):    1.538ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.613     1.538    tree/clock_IBUF_BUFG
+    SLICE_X7Y21          FDRE                                         r  tree/ascii_symbol_it_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y21          FDRE (Prop_fdre_C_Q)         0.141     1.679 r  tree/ascii_symbol_it_reg[0]/Q
+                         net (fo=52, routed)          0.242     1.920    tree/code_tab_reg_0_15_0_0/A0
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0/SP/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.880     2.053    tree/code_tab_reg_0_15_0_0/WCLK
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0/SP/CLK
+                         clock pessimism             -0.503     1.551    
+    SLICE_X6Y21          RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.861    tree/code_tab_reg_0_15_0_0/SP
+  -------------------------------------------------------------------
+                         required time                         -1.861    
+                         arrival time                           1.920    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 tree/ascii_symbol_it_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/code_tab_reg_0_15_0_0__1/DP/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.383ns  (logic 0.141ns (36.840%)  route 0.242ns (63.160%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.053ns
+    Source Clock Delay      (SCD):    1.538ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.613     1.538    tree/clock_IBUF_BUFG
+    SLICE_X7Y21          FDRE                                         r  tree/ascii_symbol_it_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y21          FDRE (Prop_fdre_C_Q)         0.141     1.679 r  tree/ascii_symbol_it_reg[0]/Q
+                         net (fo=52, routed)          0.242     1.920    tree/code_tab_reg_0_15_0_0__1/A0
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__1/DP/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.880     2.053    tree/code_tab_reg_0_15_0_0__1/WCLK
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__1/DP/CLK
+                         clock pessimism             -0.503     1.551    
+    SLICE_X6Y21          RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.861    tree/code_tab_reg_0_15_0_0__1/DP
+  -------------------------------------------------------------------
+                         required time                         -1.861    
+                         arrival time                           1.920    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 tree/ascii_symbol_it_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/code_tab_reg_0_15_0_0__1/SP/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.383ns  (logic 0.141ns (36.840%)  route 0.242ns (63.160%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.053ns
+    Source Clock Delay      (SCD):    1.538ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.613     1.538    tree/clock_IBUF_BUFG
+    SLICE_X7Y21          FDRE                                         r  tree/ascii_symbol_it_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y21          FDRE (Prop_fdre_C_Q)         0.141     1.679 r  tree/ascii_symbol_it_reg[0]/Q
+                         net (fo=52, routed)          0.242     1.920    tree/code_tab_reg_0_15_0_0__1/A0
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__1/SP/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.880     2.053    tree/code_tab_reg_0_15_0_0__1/WCLK
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__1/SP/CLK
+                         clock pessimism             -0.503     1.551    
+    SLICE_X6Y21          RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.861    tree/code_tab_reg_0_15_0_0__1/SP
+  -------------------------------------------------------------------
+                         required time                         -1.861    
+                         arrival time                           1.920    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 tree/ascii_symbol_it_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/code_tab_reg_0_15_0_0__11/DP/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.383ns  (logic 0.141ns (36.840%)  route 0.242ns (63.160%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.053ns
+    Source Clock Delay      (SCD):    1.538ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.613     1.538    tree/clock_IBUF_BUFG
+    SLICE_X7Y21          FDRE                                         r  tree/ascii_symbol_it_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y21          FDRE (Prop_fdre_C_Q)         0.141     1.679 r  tree/ascii_symbol_it_reg[0]/Q
+                         net (fo=52, routed)          0.242     1.920    tree/code_tab_reg_0_15_0_0__11/A0
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__11/DP/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.880     2.053    tree/code_tab_reg_0_15_0_0__11/WCLK
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__11/DP/CLK
+                         clock pessimism             -0.503     1.551    
+    SLICE_X6Y21          RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.861    tree/code_tab_reg_0_15_0_0__11/DP
+  -------------------------------------------------------------------
+                         required time                         -1.861    
+                         arrival time                           1.920    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 tree/ascii_symbol_it_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/code_tab_reg_0_15_0_0__11/SP/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.383ns  (logic 0.141ns (36.840%)  route 0.242ns (63.160%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.053ns
+    Source Clock Delay      (SCD):    1.538ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.613     1.538    tree/clock_IBUF_BUFG
+    SLICE_X7Y21          FDRE                                         r  tree/ascii_symbol_it_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y21          FDRE (Prop_fdre_C_Q)         0.141     1.679 r  tree/ascii_symbol_it_reg[0]/Q
+                         net (fo=52, routed)          0.242     1.920    tree/code_tab_reg_0_15_0_0__11/A0
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__11/SP/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.880     2.053    tree/code_tab_reg_0_15_0_0__11/WCLK
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__11/SP/CLK
+                         clock pessimism             -0.503     1.551    
+    SLICE_X6Y21          RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.861    tree/code_tab_reg_0_15_0_0__11/SP
+  -------------------------------------------------------------------
+                         required time                         -1.861    
+                         arrival time                           1.920    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 tree/ascii_symbol_it_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/code_tab_reg_0_15_0_0__13/DP/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.383ns  (logic 0.141ns (36.840%)  route 0.242ns (63.160%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.053ns
+    Source Clock Delay      (SCD):    1.538ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.613     1.538    tree/clock_IBUF_BUFG
+    SLICE_X7Y21          FDRE                                         r  tree/ascii_symbol_it_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y21          FDRE (Prop_fdre_C_Q)         0.141     1.679 r  tree/ascii_symbol_it_reg[0]/Q
+                         net (fo=52, routed)          0.242     1.920    tree/code_tab_reg_0_15_0_0__13/A0
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__13/DP/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.880     2.053    tree/code_tab_reg_0_15_0_0__13/WCLK
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__13/DP/CLK
+                         clock pessimism             -0.503     1.551    
+    SLICE_X6Y21          RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.861    tree/code_tab_reg_0_15_0_0__13/DP
+  -------------------------------------------------------------------
+                         required time                         -1.861    
+                         arrival time                           1.920    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 tree/ascii_symbol_it_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/code_tab_reg_0_15_0_0__13/SP/WADR0
+                            (rising edge-triggered cell RAMD32 clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.383ns  (logic 0.141ns (36.840%)  route 0.242ns (63.160%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.053ns
+    Source Clock Delay      (SCD):    1.538ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.613     1.538    tree/clock_IBUF_BUFG
+    SLICE_X7Y21          FDRE                                         r  tree/ascii_symbol_it_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y21          FDRE (Prop_fdre_C_Q)         0.141     1.679 r  tree/ascii_symbol_it_reg[0]/Q
+                         net (fo=52, routed)          0.242     1.920    tree/code_tab_reg_0_15_0_0__13/A0
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__13/SP/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.880     2.053    tree/code_tab_reg_0_15_0_0__13/WCLK
+    SLICE_X6Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__13/SP/CLK
+                         clock pessimism             -0.503     1.551    
+    SLICE_X6Y21          RAMD32 (Hold_ramd32_CLK_WADR0)
+                                                      0.310     1.861    tree/code_tab_reg_0_15_0_0__13/SP
+  -------------------------------------------------------------------
+                         required time                         -1.861    
+                         arrival time                           1.920    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.087ns  (arrival time - required time)
+  Source:                 tree/ascii_symbol_it_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/code_tab_reg_0_15_0_0__3/DP/WADR2
+                            (rising edge-triggered cell RAMD32 clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.355ns  (logic 0.141ns (39.705%)  route 0.214ns (60.295%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.053ns
+    Source Clock Delay      (SCD):    1.538ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.613     1.538    tree/clock_IBUF_BUFG
+    SLICE_X7Y21          FDRE                                         r  tree/ascii_symbol_it_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y21          FDRE (Prop_fdre_C_Q)         0.141     1.679 r  tree/ascii_symbol_it_reg[2]/Q
+                         net (fo=51, routed)          0.214     1.893    tree/code_tab_reg_0_15_0_0__3/A2
+    SLICE_X4Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__3/DP/WADR2
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.880     2.053    tree/code_tab_reg_0_15_0_0__3/WCLK
+    SLICE_X4Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__3/DP/CLK
+                         clock pessimism             -0.502     1.552    
+    SLICE_X4Y21          RAMD32 (Hold_ramd32_CLK_WADR2)
+                                                      0.254     1.806    tree/code_tab_reg_0_15_0_0__3/DP
+  -------------------------------------------------------------------
+                         required time                         -1.806    
+                         arrival time                           1.893    
+  -------------------------------------------------------------------
+                         slack                                  0.087    
+
+Slack (MET) :             0.087ns  (arrival time - required time)
+  Source:                 tree/ascii_symbol_it_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            tree/code_tab_reg_0_15_0_0__3/SP/WADR2
+                            (rising edge-triggered cell RAMD32 clocked by clock  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clock rise@0.000ns - clock rise@0.000ns)
+  Data Path Delay:        0.355ns  (logic 0.141ns (39.705%)  route 0.214ns (60.295%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.053ns
+    Source Clock Delay      (SCD):    1.538ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.236     0.236 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.663     0.899    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.925 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.613     1.538    tree/clock_IBUF_BUFG
+    SLICE_X7Y21          FDRE                                         r  tree/ascii_symbol_it_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y21          FDRE (Prop_fdre_C_Q)         0.141     1.679 r  tree/ascii_symbol_it_reg[2]/Q
+                         net (fo=51, routed)          0.214     1.893    tree/code_tab_reg_0_15_0_0__3/A2
+    SLICE_X4Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__3/SP/WADR2
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clock rise edge)      0.000     0.000 r  
+    AA9                                               0.000     0.000 r  clock (IN)
+                         net (fo=0)                   0.000     0.000    clock
+    AA9                  IBUF (Prop_ibuf_I_O)         0.425     0.425 r  clock_IBUF_inst/O
+                         net (fo=1, routed)           0.719     1.144    clock_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.173 r  clock_IBUF_BUFG_inst/O
+                         net (fo=2625, routed)        0.880     2.053    tree/code_tab_reg_0_15_0_0__3/WCLK
+    SLICE_X4Y21          RAMD32                                       r  tree/code_tab_reg_0_15_0_0__3/SP/CLK
+                         clock pessimism             -0.502     1.552    
+    SLICE_X4Y21          RAMD32 (Hold_ramd32_CLK_WADR2)
+                                                      0.254     1.806    tree/code_tab_reg_0_15_0_0__3/SP
+  -------------------------------------------------------------------
+                         required time                         -1.806    
+                         arrival time                           1.893    
+  -------------------------------------------------------------------
+                         slack                                  0.087    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clock
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { clock }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         20.000      17.056     RAMB18_X0Y4   decoder/decoded_characters_array_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         20.000      17.056     RAMB18_X0Y3   raw_decoder_input_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         20.000      17.056     RAMB18_X0Y14  tree/prob_tab_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.944         20.000      17.056     RAMB18_X0Y14  tree/prob_tab_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         20.000      17.056     RAMB18_X0Y5   final_output_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.944         20.000      17.056     RAMB18_X0Y6   decoder/code_list_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.944         20.000      17.056     RAMB18_X0Y6   decoder/code_list_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         20.000      17.424     RAMB18_X0Y4   decoder/decoded_characters_array_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         20.000      17.424     RAMB18_X0Y3   raw_decoder_input_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         20.000      17.424     RAMB18_X0Y5   final_output_reg/CLKBWRCLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X8Y27   tree/ID_reg_r1_0_63_6_8/RAMA/CLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X8Y27   tree/ID_reg_r1_0_63_6_8/RAMB/CLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X26Y23  tree/ID_reg_r3_0_63_15_17/RAMB/CLK
+Low Pulse Width   Fast    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X26Y23  tree/ID_reg_r3_0_63_15_17/RAMB/CLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X26Y23  tree/ID_reg_r3_0_63_15_17/RAMC/CLK
+Low Pulse Width   Fast    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X26Y23  tree/ID_reg_r3_0_63_15_17/RAMC/CLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X26Y23  tree/ID_reg_r3_0_63_15_17/RAMD/CLK
+Low Pulse Width   Fast    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X26Y23  tree/ID_reg_r3_0_63_15_17/RAMD/CLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X34Y29  tree/ID_reg_r3_0_63_18_20/RAMA/CLK
+Low Pulse Width   Fast    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X34Y29  tree/ID_reg_r3_0_63_18_20/RAMA/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         10.000      8.750      SLICE_X10Y19  codes_tab_length_reg_0_15_0_0__0/SP/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X16Y30  tree/ID_reg_r6_64_127_27_29/RAMA/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X16Y30  tree/ID_reg_r6_64_127_27_29/RAMB/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X16Y30  tree/ID_reg_r6_64_127_27_29/RAMC/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         10.000      8.750      SLICE_X10Y19  codes_tab_length_reg_0_15_0_0__10/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         10.000      8.750      SLICE_X10Y19  codes_tab_length_reg_0_15_0_0__12/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         10.000      8.750      SLICE_X10Y19  codes_tab_length_reg_0_15_0_0__14/SP/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X16Y30  tree/ID_reg_r6_64_127_27_29/RAMD/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X16Y28  tree/ID_reg_r6_64_127_30_30/DP/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         10.000      8.750      SLICE_X16Y28  tree/ID_reg_r6_64_127_30_30/SP/CLK
+
+
+

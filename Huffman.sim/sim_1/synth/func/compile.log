@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SDUP_2020_projekt_H/Huffman/Huffman.sim/sim_1/synth/func/huffman_decoder_tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module create_tree
+INFO: [VRFC 10-311] analyzing module huffman_decoder
+INFO: [VRFC 10-311] analyzing module raw_decoder
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/SDUP_2020_projekt_H/Huffman/Huffman.srcs/sim_1/new/huffman_decoder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module huffman_decoder_tb
+WARNING: [VRFC 10-2495] decimal constant 100000000000 is too large, using 1215752192 (i.e limiting to 32 bits) instead [D:/SDUP_2020_projekt_H/Huffman/Huffman.srcs/sim_1/new/huffman_decoder_tb.v:72]

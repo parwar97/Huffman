@@ -1,0 +1,9 @@
+0.6
+2016.4
+Jan 23 2017
+19:37:30
+D:/SDUP_2020_projekt_H/Huffman/Huffman.sim/sim_1/behav/glbl.v,1485222234,verilog,,,,glbl,,,,,,,,
+D:/SDUP_2020_projekt_H/Huffman/Huffman.srcs/sim_1/new/huffman_decoder_tb.v,1600379617,systemVerilog,,,,huffman_decoder_tb,,,,,,,,
+D:/SDUP_2020_projekt_H/Huffman/Huffman.srcs/sources_1/new/create_tree.v,1600379655,systemVerilog,,,,create_tree,,,,,,,,
+D:/SDUP_2020_projekt_H/Huffman/Huffman.srcs/sources_1/new/huffman_decoder.v,1600379584,systemVerilog,,,,huffman_decoder,,,,,,,,
+D:/SDUP_2020_projekt_H/Huffman/Huffman.srcs/sources_1/new/raw_decoder.v,1600379633,systemVerilog,,,,raw_decoder,,,,,,,,

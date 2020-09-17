@@ -1,0 +1,7 @@
+Running: xsim.dir/huffman_decoder_tb_func_impl/xsimk.exe -simmode gui -wdb huffman_decoder_tb_func_impl.wdb -simrunnum 0 -socket 64768
+Design successfully loaded
+Design Loading Memory Usage: 35400 KB (Peak: 35400 KB)
+Design Loading CPU Usage: 108 ms
+Simulation completed
+Simulation Memory Usage: 46304 KB (Peak: 46304 KB)
+Simulation CPU Usage: 38061 ms

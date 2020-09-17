@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  "../../../Huffman.srcs/sources_1/new/raw_decoder.v"
+sv xil_defaultlib  "../../../Huffman.srcs/sources_1/new/create_tree.v"
+sv xil_defaultlib  "../../../Huffman.srcs/sources_1/new/huffman_decoder.v"
+sv xil_defaultlib  "../../../Huffman.srcs/sim_1/new/huffman_decoder_tb.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

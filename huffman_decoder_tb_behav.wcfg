@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="huffman_decoder_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="huffman_decoder_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="427293519547fs"></ZoomStartTime>
+      <ZoomEndTime time="428232402266fs"></ZoomEndTime>
+      <Cursor1Time time="427850000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="174"></NameColumnWidth>
+      <ValueColumnWidth column_width="64"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/huffman_decoder_tb/clock" type="logic">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/huffman_decoder_tb/decoder/decoded_out" type="array">
+      <obj_property name="ElementShortName">decoded_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">decoded_out[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/huffman_decoder_tb/decoder/tree/ID" type="array">
+      <obj_property name="ElementShortName">ID[0:99][31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID[0:99][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/huffman_decoder_tb/decoder/tree/last_symbol" type="array">
+      <obj_property name="ElementShortName">last_symbol[31:0]</obj_property>
+      <obj_property name="ObjectShortName">last_symbol[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/huffman_decoder_tb/decoder/tree/current_symbol" type="array">
+      <obj_property name="ElementShortName">current_symbol[31:0]</obj_property>
+      <obj_property name="ObjectShortName">current_symbol[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/huffman_decoder_tb/decoder/tree/it" type="array">
+      <obj_property name="ElementShortName">it[31:0]</obj_property>
+      <obj_property name="ObjectShortName">it[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/huffman_decoder_tb/decoder/tree/shift2" type="array">
+      <obj_property name="ElementShortName">shift2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">shift2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/huffman_decoder_tb/decoder/tree/temp" type="array">
+      <obj_property name="ElementShortName">temp[31:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/huffman_decoder_tb/decoder/tree/P" type="array">
+      <obj_property name="ElementShortName">P[0:99][31:0]</obj_property>
+      <obj_property name="ObjectShortName">P[0:99][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/huffman_decoder_tb/decoder/tree/shift" type="array">
+      <obj_property name="ElementShortName">shift[31:0]</obj_property>
+      <obj_property name="ObjectShortName">shift[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
